@@ -10,6 +10,9 @@ body {
     text-transform: capitalize;
 }
 
+.card-title {
+    text-align: center;
+}
 
 .card {
     flex: 1 1 21rem;
@@ -103,3 +106,7 @@ h2 {
     font-size: 16px;
 }
 
+.btn {
+    background-color: #65727a;
+    color: white;
+}
