@@ -55,7 +55,7 @@ h2 {
 
 /*REGISTRO FORMULARIO*/
 .form-register {
-    width: 400px;
+    width: 450px;
     background-color: #24303c;
     padding: 30px;
     margin: auto;
@@ -106,7 +106,7 @@ h2 {
     font-size: 16px;
 }
 
-.btn {
+.card .btn {
     background-color: #65727a;
     color: white;
 }

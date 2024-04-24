@@ -28,8 +28,7 @@
                             <a class="nav-link" href="Categoria.html">Categoria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                aria-controls="offcanvasRight" aria-controls="offcanvasExample">Carrito</a>
+                            <a class="nav-link" href="Carro.html">Carrito</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Registro.html">Registrarme</a>
@@ -41,6 +40,7 @@
     </header>
     <main>
         <h1>Formulario</h1>
+
         <section class="form-register">
             <h4>Formulario de Registro</h4>
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
@@ -48,27 +48,16 @@
             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
             <input class="controls" type="password" name="contraseña" id="contraseña"
                 placeholder="Ingrese su contraseña">
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a>
-            </p>
+
+            <input type="checkbox" value="info" id="info">
+            <label for="info">
+                <p>Acepta <a href="#">terminos y condiciones</a></p>
+            </label>
+
             <input class="botons" type="submit" value="Registrarme">
             <p><a href="#">ya tengo cuenta</a></p>
         </section>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ol>
-                    <li>Producto 1: Manillar rojo $15.000</li>
-                    <li>Producto 2: Marco celeste $120.000</li>
-                    <li>Producto 3: sillin negro $20.000</li>
-                    <li>Producto 4: llanta fixie $10.000</li>
-                    <li>Total: $165.000</li>
-                </ol>
-            </div>
-        </div>
     </main>
 </body>
 
