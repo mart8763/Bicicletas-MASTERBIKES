@@ -34,15 +34,27 @@ h2 {
 
 
 /*navbar*/
-.navbar {
-    background-color: #e6e8e3;
+/* Cambiar el color de fondo y el texto al pasar el mouse */
+.navbar-nav .nav-link:hover {
+    background-color: #5ea9f0;
 }
 
-.navbar-text,
-.navbar-brand,
-.nav-link {
-    color: black !important;
+.navbar-nav .nav-link  {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #000;
+    background-color: #e0dddd;
+    border: none;
+    border-radius: 75px;
+    box-shadow: 0px 8px 15px rgba(134, 58, 58, 0.1);
+    transition: all 0.6s ease 0s;
+    cursor: pointer;
+    outline: none;
 }
+
 
 /*CARRITO*/
 .contenedor {
@@ -67,7 +79,7 @@ h2 {
 }
 
 .form-register h4 {
-    font-size: 22px;
+    font-size: 27px;
     margin-bottom: 20px;
 }
 
@@ -90,21 +102,57 @@ h2 {
     line-height: 40px;
     /*sirve para que el parrafo quede con la misma altura arriba y abajo*/
 }
-
-.form-register a:hover {
-    color: white;
-    text-decoration: underline;
+.form-register .botons-container {
+    display: flex;
+    justify-content: center; /* Alinear el contenido horizontalmente al centro */
 }
 
 .form-register .botons {
-    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 17px 100px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
     background-color: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
+    border: 1px solid rgba(7, 33, 80, 0.6);
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+    margin-left: 50px;
 }
+
+.form-register .botons:hover {
+    animation: rotate624 0.7s ease-in-out both;
+}
+
+@keyframes rotate624 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+            
+        
+       
+        
 
 .card .btn {
     background-color: #65727a;
