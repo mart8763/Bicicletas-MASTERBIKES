@@ -54,9 +54,17 @@ h2 {
     cursor: pointer;
     outline: none;
 }
-
+.navbar {
+    background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+}
+.navbar-brand {
+    color: #000000; /* Cambia el color de las letras del navbar */
+}
 
 /*CARRITO*/
+
 .contenedor {
     display: flex;
     justify-content: center;
@@ -94,6 +102,17 @@ h2 {
     font-size: 18px;
     color: white;
 }
+/* Colores para el fondo de la web */
+body {
+    background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    /* Otros estilos opcionales */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+}
+
+
 
 .form-register p {
     height: 40px;
@@ -148,8 +167,50 @@ h2 {
         transform: rotate(0deg) translate3d(0, 0, 0);
     }
 }
-
-            
+/*efectos de los logos de redes sociales */
+.parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .child {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .child:hover {
+    background-color: white;
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+    transform: perspective(180px) rotateX(60deg) translateY(2px);
+    box-shadow: 0px 10px 10px rgb(1, 49, 182);
+  }
+  
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  
+  .button:hover {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+    border-radius: 50%;
+  }           
         
        
         
