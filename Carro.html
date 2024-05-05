@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" class="pagina-carrito">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="icon" type="img/jpg" href="img/icono.png">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script defer src="js/carro.js"></script>
+   
 </head>
-
-<body>
+<body class="carrito-page">
+   
     <header>
-        <nav class="navbar navbar-expand-lg ">
+        
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
+                
                 <a class="navbar-brand" href="index.html">Inicio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,16 +40,49 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Carrito</h1>
-        <div class="contenedor">
-            <img src="img/carrito.png" alt="" id="carro">
+    <h2>Carrito de Compras</h2>
+
+    <div class="contenedor">
+        <div class="productos contenedor-items">
+            <div class="item">
+                <span class="titulo-item">trek marlin 5</span>
+                <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
+                <span class="precio-item">$250.000</span>
+                <button class="btn btn-primary boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">trek marlin 5</span>
+                <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
+                <span class="precio-item">$230.000</span>
+                <button class="btn btn-primary boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">trek marlin 5</span>
+                <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
+                <span class="precio-item">$15.000</span>
+                <button class="btn btn-primary boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">trek marlin 5</span>
+                <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
+                <span class="precio-item">$15.000</span>
+                <button class="btn btn-primary boton-item">Agregar al Carrito</button>
+            </div>
+           
+            <!-- Resto de los elementos -->
         </div>
 
-    </main>
+        <div class="carrito">
+        
+            <ul id="lista-carrito">
+            </ul>
+            <button class="btn btn-danger" id="btn-vaciar-carrito">Vaciar Carrito</button>
+            <button class="btn btn-success" onclick="pagar()">Pagar</button>
+        </div>
+    </div>
     <footer></footer>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="funciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.j"></script>
+    <script defer src="js/inicio.js"></script>
 </body>
-
 </html>

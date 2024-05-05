@@ -90,7 +90,7 @@ body {
     width: 450px;
     margin: 20vh auto 0 auto;
     padding: 50px;
-    background-color: whitesmoke;
+    background-color: #c8e0e4;
     border-radius: 4px;
     font-size: 12px;
 }
@@ -101,14 +101,117 @@ body {
 }
 
 #form button {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    color: white;
-    background-color: rgb(41, 57, 194);
-    border: none;
-    border-radius: 4px;
+  position: relative;
+  margin: 0;
+  padding: 17px 35px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #353b8b;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  color: #f7f7f7;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  margin-left: 76px; 
 }
+
+#form button span {
+  color: #e9e9e9;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+#form button:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+#form button:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+#form .btn-shine {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+#form .btn-shine span {
+  z-index: 20;
+}
+
+#form .btn-shine:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+#form .btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 
 .input-control {
     display: flex;
@@ -152,16 +255,11 @@ a {
 /* Colores para el fondo de la web */
 body {
     background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg');
-    /* Ruta a tu imagen de fondo */
     background-size: cover;
-    /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center;
-    /* Centra la imagen en el fondo */
-    /* Otros estilos opcionales */
     margin: 0;
-    /* Elimina el margen predeterminado del cuerpo */
     padding: 0;
-    /* Elimina el relleno predeterminado del cuerpo */
+    /
 }
 
 
@@ -249,4 +347,87 @@ button {
 
 .condiciones {
     color: white;
+}
+
+/* carrito */
+.carrito-page * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
+.carrito-page header {
+  background: url(img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.carrito-page header h1 {
+  text-align: center;
+  font-size: 35px;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.carrito-page .contenedor {
+  max-width: 1200px;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  contain: paint;
+}
+
+.carrito-page .contenedor .contenedor-items {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 30px;
+  grid-row-gap: 30px;
+  width: 100%;
+  transition: .3s;
+}
+
+.carrito-page .contenedor .contenedor-items .item {
+  max-width: 200px;
+  margin: auto;
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 20px;
+  transition: .3s;
+}
+
+.carrito-page .contenedor .contenedor-items .item .img-item {
+  width: 100%;
+}
+
+.carrito-page .contenedor .contenedor-items .item:hover {
+  box-shadow: 0 0 10px #666;
+  scale: 1.05;
+}
+
+.carrito-page .contenedor .contenedor-items .item .titulo-item {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.carrito-page .contenedor .contenedor-items .item .precio-item {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.carrito-page .contenedor .contenedor-items .item .boton-item {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  background-color: black;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
