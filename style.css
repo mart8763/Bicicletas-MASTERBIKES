@@ -39,7 +39,7 @@ h2 {
     background-color: #5ea9f0;
 }
 
-.navbar-nav .nav-link  {
+.navbar-nav .nav-link {
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: none;
@@ -54,13 +54,19 @@ h2 {
     cursor: pointer;
     outline: none;
 }
+
 .navbar {
-    background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg'); /* Ruta a tu imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
+    background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg');
+    /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center;
+    /* Centra la imagen en el fondo */
 }
+
 .navbar-brand {
-    color: #000000; /* Cambia el color de las letras del navbar */
+    color: #000000;
+    /* Cambia el color de las letras del navbar */
 }
 
 /*CARRITO*/
@@ -74,99 +80,114 @@ h2 {
 }
 
 /*REGISTRO FORMULARIO*/
-.form-register {
+
+body {
+    background: linear-gradient(to left, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#form {
     width: 450px;
-    background-color: #24303c;
-    padding: 30px;
-    margin: auto;
-    margin-top: 60px;
+    margin: 20vh auto 0 auto;
+    padding: 50px;
+    background-color: whitesmoke;
     border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
+    font-size: 12px;
 }
 
-.form-register h4 {
-    font-size: 27px;
-    margin-bottom: 20px;
+#form h1 {
+    color: #0f2027;
+    text-align: center;
 }
 
-.controls {
-    width: 100%;
-    background-color: #24303c;
+#form button {
     padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
+    margin-top: 10px;
+    width: 100%;
     color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
 }
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+p,
+a {
+    font-size: 15px;
+    text-align: center;
+}
+
+
 /* Colores para el fondo de la web */
 body {
-    background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg'); /* Ruta a tu imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
+    background-image: url('img/evan-leith-3kruWaCOFpA-unsplash.jpg');
+    /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center;
+    /* Centra la imagen en el fondo */
     /* Otros estilos opcionales */
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
-    padding: 0; /* Elimina el relleno predeterminado del cuerpo */
-}
-
-
-
-.form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-    /*sirve para que el parrafo quede con la misma altura arriba y abajo*/
-}
-.form-register .botons-container {
-    display: flex;
-    justify-content: center; /* Alinear el contenido horizontalmente al centro */
-}
-
-.form-register .botons {
-    position: relative;
     margin: 0;
-    padding: 17px 100px;
-    outline: none;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #1f53c5;
-    border: 1px solid rgba(7, 33, 80, 0.6);
-    border-radius: 10px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: inherit;
-    z-index: 0;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-    margin-left: 50px;
+    /* Elimina el margen predeterminado del cuerpo */
+    padding: 0;
+    /* Elimina el relleno predeterminado del cuerpo */
 }
 
-.form-register .botons:hover {
-    animation: rotate624 0.7s ease-in-out both;
-}
+
 
 @keyframes rotate624 {
     0% {
         transform: rotate(0deg) translate3d(0, 0, 0);
     }
+
     25% {
         transform: rotate(3deg) translate3d(0, 0, 0);
     }
+
     50% {
         transform: rotate(-3deg) translate3d(0, 0, 0);
     }
+
     75% {
         transform: rotate(1deg) translate3d(0, 0, 0);
     }
+
     100% {
         transform: rotate(0deg) translate3d(0, 0, 0);
     }
 }
+
 /*efectos de los logos de redes sociales */
 .parent {
     width: 100%;
@@ -174,9 +195,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .child {
+}
+
+.child {
     width: 50px;
     height: 50px;
     display: flex;
@@ -186,23 +207,23 @@ body {
     transition: all 0.5s ease-in-out;
     border-radius: 50%;
     margin: 0 5px;
-  }
-  
-  .child:hover {
+}
+
+.child:hover {
     background-color: white;
     background-position: -100px 100px, -100px 100px;
     transform: rotate3d(0.5, 1, 0, 30deg);
     transform: perspective(180px) rotateX(60deg) translateY(2px);
     box-shadow: 0px 10px 10px rgb(1, 49, 182);
-  }
-  
-  button {
+}
+
+button {
     border: none;
     background-color: transparent;
     font-size: 20px;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     width: inherit;
     height: inherit;
     display: flex;
@@ -210,12 +231,22 @@ body {
     align-items: center;
     transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
     border-radius: 50%;
-  }           
-        
-       
-        
+}
+
+
+
 
 .card .btn {
     background-color: #65727a;
+    color: white;
+}
+
+/* Terminos y condiciones */
+#terminos {
+    color: white;
+    text-align: center;
+}
+
+.condiciones {
     color: white;
 }

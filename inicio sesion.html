@@ -8,7 +8,7 @@
     <link rel="icon" type="img/jpg" href="img/icono.png">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
-
+    <script defer src="funciones.js"></script>
 </head>
 
 <body>
@@ -42,21 +42,8 @@
 
     <main>
         <div class="container">
-            <form action="/" id="form">
-                <h1>Registrarme</h1>
-
-                <div class="input-control">
-                    <label for="username">Nombre</label>
-                    <input id="username" name="username" type="text">
-                    <div class="error"></div>
-                </div>
-
-                <div class="input-control">
-                    <label for="username">Apellido</label>
-                    <input id="username2" name="username2" type="text">
-                    <div class="error"></div>
-                </div>
-
+            <form id="form" action="/">
+                <h1>Iniciar sesion</h1>
                 <div class="input-control">
                     <label for="email">Email</label>
                     <input id="email" name="email" type="text">
@@ -69,20 +56,9 @@
                     <div class="error"></div>
                 </div>
 
-                <div>
-                    <input type="checkbox" value="info" id="info">
-                    <label for="info">
-                        <p>Acepta <a href="Terminos y condiciones.html">terminos y condiciones</a></p>
-                    </label>
-                </div>
-
                 <button type="submit">Registrarme</button>
-                <div>
-                    <p><a href="inicio sesion.html">ya tengo cuenta</a></p>
-                </div>
             </form>
         </div>
-
     </main>
 
     <footer>
@@ -125,8 +101,7 @@
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.j"></script>
-    <script defer src="js/funciones.js"></script>
-
+    <script defer src="js/inicio.js"></script>
 </body>
 
 </html>
