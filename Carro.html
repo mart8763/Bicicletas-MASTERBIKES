@@ -1,93 +1,82 @@
 <!DOCTYPE html>
-<html lang="es" class="pagina-carrito">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="img/jpg" href="img/icono.png">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
-    <script defer src="js/carro.js"></script>
-
 </head>
 
 <body>
+    <div class="wrapper">
+        <aside>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
 
-    <header>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-
-                <a class="navbar-brand" href="index.html">Inicio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Categoria.html">Categoria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Carro.html">Carrito</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Registro.html">Registrarme</a>
-                        </li>
-                    </ul>
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Productos.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Categoria.html">Categoria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Carro.html">Carrito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Registro.html">Registrarme</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+        </aside>
+
+
+        <main>
+            <h2 class="titulo-principal">Carrito</h2>
+            <div class="contenedor-carrito">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+
+                <div id="carrito-productos" class="carrito-productos disabled">
+                    <!-- Esto se va a completar con el JS -->
+                </div>
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i
+                        class="bi bi-emoji-laughing"></i></p>
+
             </div>
-        </nav>
-    </header>
-    <h2>Carrito de Compras</h2>
-
-    <div class="carrito-page">
-        <div class="contenedor">
-            <div class="productos contenedor-items">
-                <div class="item">
-                    <span class="titulo-item">trek marlin 5</span>
-                    <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
-                    <span class="precio-item">$250.000</span>
-                    <button class="btn btn-primary boton-item">Agregar al Carrito</button>
-                </div>
-                <div class="item">
-                    <span class="titulo-item">trek marlin 5</span>
-                    <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
-                    <span class="precio-item">$230.000</span>
-                    <button class="btn btn-primary boton-item">Agregar al Carrito</button>
-                </div>
-                <div class="item">
-                    <span class="titulo-item">trek marlin 5</span>
-                    <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
-                    <span class="precio-item">$15.000</span>
-                    <button class="btn btn-primary boton-item">Agregar al Carrito</button>
-                </div>
-                <div class="item">
-                    <span class="titulo-item">trek marlin 5</span>
-                    <img src="img/TrekMarlin529RojoML20222_1200x.webp" alt="" class="img-item">
-                    <span class="precio-item">$15.000</span>
-                    <button class="btn btn-primary boton-item">Agregar al Carrito</button>
-                </div>
-
-                <!-- Resto de los elementos -->
-            </div>
-
-            <div class="carrito">
-
-                <ul id="lista-carrito">
-                </ul>
-                <button class="btn btn-danger" id="btn-vaciar-carrito">Vaciar Carrito</button>
-                <button class="btn btn-success" onclick="pagar()">Pagar</button>
-            </div>
-        </div>
+        </main>
     </div>
-    <footer></footer>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.j"></script>
-    <script defer src="js/inicio.js"></script>
+    <script src="js/carro.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

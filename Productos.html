@@ -22,13 +22,15 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Productos.html">Productos</a>
+                            <a id="todos" class="nav-link boton-categoria active" aria-current="page"
+                                href="Productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Categoria.html">Categoria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Carro.html">Carrito</a>
+                            <a class="nav-link" href="Carro.html">Carrito <span id="numerito"
+                                    class="numerito">0</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Registro.html">Registrarme</a>
@@ -38,96 +40,11 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Productos</h1>
-
-        <!--COMIENZO CARD-->
-        <div class="container">
-
-            <div class="row gy-3">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="imgProductos/marco.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                nesciunt, non quisquam veritatis numquam accusamus autem voluptatem aut, incidunt unde
-                                impedit mollitia reiciendis eos? Praesentium velit quisquam in libero odit.
-                            </p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#mi-modalp1">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="imgProductos/llanta.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 2</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                nesciunt, non quisquam veritatis numquam accusamus autem voluptatem aut, incidunt unde
-                                impedit mollitia reiciendis eos? Praesentium velit quisquam in libero odit.</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#mi-modalp2">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="imgProductos/manillar.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 3</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                nesciunt, non quisquam veritatis numquam accusamus autem voluptatem aut, incidunt unde
-                                impedit mollitia reiciendis eos? Praesentium velit quisquam in
-                            </p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#mi-modalp3">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="imgProductos/asiento.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 4</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                nesciunt, non quisquam veritatis numquam accusamus autem voluptatem aut, incidunt unde
-                                impedit mollitia reiciendis eos? Praesentium velit quisquam in libero</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#mi-modalp4">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="imgProductos/puños.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 4</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                nesciunt, non quisquam veritatis numquam accusamus autem voluptatem aut, incidunt unde
-                                impedit mollitia reiciendis eos? Praesentium velit quisquam in libero</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#mi-modalp4">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="imgProductos/rueba.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 4</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                nesciunt, non quisquam veritatis numquam accusamus autem voluptatem aut, incidunt unde
-                                impedit mollitia reiciendis eos? Praesentium velit quisquam in libero</p>
-                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#mi-modalp4">Agregar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <main id="main">
+        <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+            <!-- Esto se va a rellenar con JS -->
         </div>
-
-
     </main>
 
     <footer>
@@ -170,6 +87,7 @@
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.j"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
