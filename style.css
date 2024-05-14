@@ -1,6 +1,6 @@
 :root {
-  --clr-main: #4b33a8;
-  --clr-main-light: #785ce9;
+  --clr-main: #E90A0A;
+  --clr-main-light: #c84e4e;
   --clr-white: #ececec;
   --clr-gray: #e2e2e2;
   --clr-red: #961818;
@@ -357,8 +357,14 @@ button {
   gap: 1rem;
 }
 
+.producto {
+  height: 100%;
+}
+
 .producto-imagen {
   max-width: 100%;
+  height: 65%;
+  width: 100%;
   border-radius: 1rem;
 }
 
@@ -372,6 +378,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: .25rem;
+  height: 35%;
 }
 
 .producto-titulo {
@@ -487,4 +494,8 @@ button {
 
 .disabled {
   display: none;
+}
+
+#logo {
+  width: 120px;
 }

@@ -52,6 +52,18 @@ const productos = [
         titulo: "Rueda",
         imagen: "imgProductos/rueda.png",
         precio: 20000
+    },
+    {
+        id: "disco",
+        titulo: "Disco",
+        imagen: "imgProductos/disco.png",
+        precio: 20000
+    },
+    {
+        id: "frenos",
+        titulo: "Frenos",
+        imagen: "imgProductos/frenos.jpg",
+        precio: 20000
     }
 ];
 
