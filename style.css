@@ -44,7 +44,7 @@ h2 {
 /*navbar*/
 /* Cambiar el color de fondo y el texto al pasar el mouse */
 .navbar-nav .nav-link:hover {
-  background-color: #5ea9f0;
+  background-color: var(--clr-main);
 }
 
 .navbar-nav .nav-link {
@@ -63,14 +63,10 @@ h2 {
   outline: none;
 }
 
-
-
 .navbar-brand {
   color: #000000;
   /* Cambia el color de las letras del navbar */
 }
-
-
 
 /*REGISTRO FORMULARIO*/
 
@@ -99,7 +95,7 @@ h2 {
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-  background-color: #353b8b;
+  background-color: var(--clr-main);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   color: #f7f7f7;
@@ -200,7 +196,6 @@ h2 {
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-
 .input-control {
   display: flex;
   flex-direction: column;
@@ -238,12 +233,6 @@ a {
   font-size: 15px;
   text-align: center;
 }
-
-
-/* Colores para el fondo de la web */
-
-
-
 
 @keyframes rotate624 {
   0% {
@@ -293,7 +282,7 @@ a {
   background-position: -100px 100px, -100px 100px;
   transform: rotate3d(0.5, 1, 0, 30deg);
   transform: perspective(180px) rotateX(60deg) translateY(2px);
-  box-shadow: 0px 10px 10px rgb(1, 49, 182);
+  box-shadow: 0px 10px 10px var(--clr-main);
 }
 
 button {
@@ -312,12 +301,21 @@ button {
   border-radius: 50%;
 }
 
-
-
-
 .card .btn {
-  background-color: #65727a;
-  color: white;
+  border: 0;
+  background-color: var(--clr-white);
+  color: var(--clr-main);
+  padding: .5rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 2px solid var(--clr-white);
+  transition: background-color .2s, color .2s;
+}
+
+.card .btn:hover {
+  background-color: var(--clr-main);
+  color: var(--clr-white);
 }
 
 /* Terminos y condiciones */
