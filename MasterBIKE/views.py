@@ -30,3 +30,7 @@ def iniciar_sesion(request):
 def termino_y_condiciones(request):
     context = {}
     return render(request, "pages/termino_y_condiciones.html", context)
+
+def electrica(request):
+    context = {}
+    return render(request, "pages/electrica.html", context)

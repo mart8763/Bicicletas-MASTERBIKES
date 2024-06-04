@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bicicletas MasterBIKE</title>
     {% load static %}
+    <link rel="icon" type="img/jpg" href="{% static 'img/icono1.png'%}">
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
@@ -22,7 +23,7 @@
             <div class="row gy-3">
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="Fotos bicicletas/Ruta/ruta1.jpg" class="card-img-top" alt="...">
+                        <img src="{% static 'Fotos bicicletas/Ruta/ruta1.jpg' %}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bicicleta 1</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
@@ -37,7 +38,7 @@
 
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="Fotos bicicletas/Mtb/mtb 3.jpg" class="card-img-top" alt="...">
+                        <img src="{% static 'Fotos bicicletas/Mtb/mtb 3.jpg'%}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bicicleta 2</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
@@ -51,7 +52,7 @@
 
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="Fotos bicicletas/nino/nino 1.jpg" class="card-img-top" alt="...">
+                        <img src="{% static 'Fotos bicicletas/nino/nino 1.jpg'%}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bicicleta 3</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
@@ -66,7 +67,7 @@
 
                 <div class="col-md-6">
                     <div class="card h-100">
-                        <img src="Fotos bicicletas/electrica/elect 1.jpg" class="card-img-top" alt="...">
+                        <img src="{% static 'Fotos bicicletas/electrica/elect 1.jpg'%}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bicicleta 4</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
@@ -80,7 +81,7 @@
 
                 <div class="col-md-6">
                     <div class="card h-100">
-                        <img src="Fotos bicicletas/urbex/urbex 1.jpg" class="card-img-top" alt="...">
+                        <img src="{% static 'Fotos bicicletas/urbex/urbex 1.jpg'%}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bicicleta 5</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit

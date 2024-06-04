@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro</title>
     {% load static %}
+    <link rel="icon" type="img/jpg" href="{% static 'img/icono1.png'%}">
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -41,13 +42,13 @@
                 <div>
                     <input type="checkbox" value="info" id="info">
                     <label for="info">
-                        <p>Acepta <a href="Terminos y condiciones.html">terminos y condiciones</a></p>
+                        <p>Acepta <a href="{% url 'termino_y_condiciones'%}">terminos y condiciones</a></p>
                     </label>
                 </div>
 
                 <button type="submit">Registrarme</button>
                 <div>
-                    <p><a href="inicio sesion.html">ya tengo cuenta</a></p>
+                    <p><a href=" {% url 'iniciar_sesion'%}">ya tengo cuenta</a></p>
                 </div>
             </form>
         </div>
