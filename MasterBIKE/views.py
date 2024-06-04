@@ -34,3 +34,19 @@ def termino_y_condiciones(request):
 def electrica(request):
     context = {}
     return render(request, "pages/electrica.html", context)
+
+def mtb(request):
+    context = {}
+    return render(request, "pages/mtb.html", context)
+
+def nino(request):
+    context = {}
+    return render(request, "pages/nino.html", context)
+
+def ruta(request):
+    context = {}
+    return render(request, "pages/ruta.html", context)
+
+def urbex(request):
+    context = {}
+    return render(request, "pages/urbex.html", context)
