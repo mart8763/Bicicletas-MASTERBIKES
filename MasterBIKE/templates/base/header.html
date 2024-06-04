@@ -1,4 +1,5 @@
 <header>
+    {%load static%}
     <h1>MasterBikes</h1>
 
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -12,7 +13,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="img/Mike._V396334647_.jpg" class="d-block mx-auto" alt="..." width="600" height="mx-auto">
+                <img src="{% static 'img/Mike._V396334647_.jpg' %}" class="d-block mx-auto" alt="..." width="600" height="mx-auto">
                 <div class="carousel-caption d-none d-md-block">
                 </div>
             </div>
