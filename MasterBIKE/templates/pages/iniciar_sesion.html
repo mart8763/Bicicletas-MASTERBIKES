@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    {% include 'base/nabvar.html' %}
+
+    <main>
+        <div class="container">
+            <form id="form" action="/" method="post">
+                <h1>Iniciar sesion</h1>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text">
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="password">Contraseña</label>
+                    <input id="password" name="password" type="password">
+                    <div class="error"></div>
+                </div>
+
+                <button type="submit">Registrarme</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/inicio formulario.js" %}"></script>
+    <script defer src="{% static "funciones.js" %}"></script>
+
+</body>
+</html>
