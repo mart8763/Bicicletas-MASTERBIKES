@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+from .models import Usuario
 
 # Create your views here.
 
@@ -50,3 +52,7 @@ def ruta(request):
 def urbex(request):
     context = {}
     return render(request, "pages/urbex.html", context)
+
+def usuarios(request):
+    usuarios = list(Usuario.objects.values())
+    return JsonResponse(usuarios, safe=False)
