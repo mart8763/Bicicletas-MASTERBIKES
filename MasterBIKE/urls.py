@@ -14,5 +14,5 @@ urlpatterns = [
     path("nino", views.nino, name="nino"),
     path("ruta", views.ruta, name="ruta"),
     path("urbex", views.urbex, name="urbex"),
-    path("usuarios/", views.usuarios),
+    path("mostrar_registro", views.mostrar_registro, name="mostrar_registro"),
 ]

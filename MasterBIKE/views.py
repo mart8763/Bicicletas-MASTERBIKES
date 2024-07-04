@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from .models import Usuario, Alumno, Genero
+from .models import Usuario
 
 # Create your views here.
 
@@ -53,11 +53,6 @@ def urbex(request):
     context = {}
     return render(request, "pages/urbex.html", context)
 
-def prueba(request):
-    Alumno = Alumno.objects.all()
-    context = {"alumnos:alumnos"}
-    return render (request, "pages/prueba.html", context)
-
-def usuarios(request):
-    usuarios = list(Usuario.objects.values())
-    return JsonResponse(usuarios, safe=False)
+def mostrar_registro(request):
+    context = {}
+    return render(request, "pages/mostrar_registro.html", context)
