@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import Usuario
+from .forms import UsuarioForm
 
 # Create your views here.
 
@@ -22,8 +23,8 @@ def carro(request):
     return render(request, "pages/carro.html", context)
 
 def registro(request):
-    context = {}
-    return render(request, "pages/registro.html", context)
+    formulario = UsuarioForm(request.POST or None)
+    return render(request, "pages/registro.html", {'formulario': formulario})
 
 def iniciar_sesion(request):
     context = {}
@@ -54,5 +55,10 @@ def urbex(request):
     return render(request, "pages/urbex.html", context)
 
 def mostrar_registro(request):
+    usuarios = Usuario.objects.all()
+    print(Usuario)
+    return render(request, "pages/mostrar_registro.html", {'usuarios': usuarios})
+
+def crear_usuario(request):
     context = {}
-    return render(request, "pages/mostrar_registro.html", context)
+    return render(request, "pages/crear_usuario.html", context)
