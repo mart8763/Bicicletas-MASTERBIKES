@@ -16,4 +16,9 @@ urlpatterns = [
     path("urbex", views.urbex, name="urbex"),
     path("mostrar_registro", views.mostrar_registro, name="mostrar_registro"),
     path("crear_usuario", views.crear_usuario, name="crear_usuario"),
+    path("crud", views.crud, name="crud"),
+    path("usuariosAdd", views.usuariosAdd, name="usuariosAdd"),
+    path('usuarios_del/<str:pk>', views.usuarios_del, name='usuarios_del'),
+    path('usuarios_findEdit/<str:pk>', views.usuarios_findEdit, name='usuarios_findEdit'),
+    path('usuariosUpdate', views.usuariosUpdate, name='usuariosUpdate'),
 ]

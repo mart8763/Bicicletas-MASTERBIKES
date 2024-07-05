@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from .models import Usuario
-from .forms import UsuarioForm
+from .models import Usuario, Genero
 
 # Create your views here.
 
@@ -23,8 +21,8 @@ def carro(request):
     return render(request, "pages/carro.html", context)
 
 def registro(request):
-    formulario = UsuarioForm(request.POST or None)
-    return render(request, "pages/registro.html", {'formulario': formulario})
+    context = {}
+    return render(request, "pages/registro.html", context)
 
 def iniciar_sesion(request):
     context = {}
@@ -55,10 +53,84 @@ def urbex(request):
     return render(request, "pages/urbex.html", context)
 
 def mostrar_registro(request):
-    usuarios = Usuario.objects.all()
-    print(Usuario)
-    return render(request, "pages/mostrar_registro.html", {'usuarios': usuarios})
+    context = {}
+    return render(request, "pages/mostrar_registro.html", context)
 
 def crear_usuario(request):
     context = {}
     return render(request, "pages/crear_usuario.html", context)
+
+def crud(request):
+    usuarios = Usuario.objects.all()
+    context = {"usuarios": usuarios}
+    return render(request, "pages/usuario_list.html", context)
+
+def usuariosAdd(request):
+    if request.method is not "POST":
+        genero = Genero.objects.all()
+        context = {"genero": genero}
+        return render(request, 'pages/registro.html', context)
+    else:
+        nombre = request.POST["nombre"]
+        apellido = request.POST["apellido"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+
+        obj = Usuario.objects.create (
+            nombre = nombre,
+            apellido = apellido,
+            email = email,
+            password = password)
+        obj.save()
+        context = {'mensaje': "Ok, datos guardados ...."}
+        return render(request, 'pages/registro.html', context)
+    
+def usuarios_del(request, pk):
+    context = {}
+    try:
+        usuario = Usuario.objects.get(nombre=pk)
+
+        usuario.delete()
+        mensaje = "Bien, datos borrados"
+        usuarios = Usuario.objects.all()
+        context = {'usuarios': usuarios, 'mensaje': mensaje}
+        return render(request, "pages/usuario_list.html", context)
+    except:
+        mensaje = "Error, rut no existe"
+        usuarios = Usuario.objects.all()
+        context = {'usuarios': usuarios, 'mensaje': mensaje}
+        return render(request, "pages/usuario_list.html", context)
+    
+def usuarios_findEdit(request, pk):
+
+    if pk != "":
+        usuario = Usuario.objects.get(nombre=pk)
+
+        context={'usuario': usuario}
+        if usuario:
+            return render(request, "pages/editar_registro.html", context)
+        else:
+            context = {'mensaje': "Error nombre no existe"}
+            return render(request, "pages/usuario_list.html", context)
+        
+def usuariosUpdate(request):
+
+    if request.method == "POST":
+        nombre = request.POST["nombre"]
+        apellido = request.POST["apellido"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+
+        usuarios = Usuario()
+        usuarios.nombre=nombre
+        usuarios.apellido=apellido
+        usuarios.email=email
+        usuarios.password=password
+        usuarios.save()
+
+        context = {'mensaje': "Ok, datos actualizados", 'usuarios': usuarios}
+        return render(request, "pages/editar_registro.html", context)
+    else:
+        usuarios = Usuario.objects.all()
+        context = {'usuarios': usuarios}
+        return render(request, "pages/usuario_list.html", context)
