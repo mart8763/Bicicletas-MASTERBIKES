@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from .models import Usuario
+from .models import Usuario, Genero
 from .forms import UsuarioRegisterForm
+from django.contrib.auth import login, authenticate
+from django.contrib import messages
 
 # Create your views here.
 
@@ -57,29 +59,30 @@ def mostrar_registro(request):
     context = {}
     return render(request, "pages/mostrar_registro.html", context)
 
-def crear_usuario(request):
-    context = {}
-    return render(request, "pages/crear_usuario.html", context)
-
 def crud(request):
     usuarios = Usuario.objects.all()
     context = {"usuarios": usuarios}
     return render(request, "pages/usuario_list.html", context)
 
-def registro_vista(request):
-
-    if request.method == "POST":
-        form = UsuarioRegisterForm(request.POST or None)
-        if form.is_valid():
-            form.save()
+def usuariosAdd(request):
+    if request.method is not "POST":
+        genero = Genero.objects.all()
+        context = {"genero": genero}
+        return render(request, 'pages/registro.html', context)
     else:
-        print("usuario no registrado")
+        nombre = request.POST["nombre"]
+        apellido = request.POST["apellido"]
+        email = request.POST["email"]
+        password = request.POST["password"]
 
-    form = UsuarioRegisterForm()
-    context = {
-        'form':  form
-    }
-    return render (request, "pages/sign-up.html", context)
+        obj = Usuario.objects.create (
+            nombre = nombre,
+            apellido = apellido,
+            email = email,
+            password = password)
+        obj.save()
+        context = {'mensaje': "Ok, datos guardados ...."}
+        return render(request, 'pages/registro.html', context)
     
 def usuarios_del(request, pk):
     context = {}
@@ -131,3 +134,24 @@ def usuariosUpdate(request):
         context = {'usuarios': usuarios}
         return render(request, "pages/usuario_list.html", context)
     
+def registro_vista(request):
+
+    if request.method == "POST":
+        form = UsuarioRegisterForm(request.POST or None)
+        if form.is_valid():
+            new_user = form.save()
+            nombre = form.cleaned_data.get("nombre")
+            messages.success(request, f"hola {nombre} su cuenta se creo correctamente.")
+            new_user = authenticate(nombre=form.cleaned_data['email'],
+                                    password=form.cleaned_data['password1']
+            )
+            login(request, new_user)
+            return redirect("MasterBIKE:index")
+    else:
+        print("usuario no registrado")
+
+    form = UsuarioRegisterForm()
+    context = {
+        'form':  form
+    }
+    return render (request, "pages/sign-up.html", context)

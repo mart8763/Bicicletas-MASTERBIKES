@@ -9,11 +9,11 @@
 </head>
 <body>
     
-    <h1>Editar datos de usuariosa</h1><br>
+    <h1>Editar datos de usuario</h1><br>
     <br>
 
     <button type="button">
-        <a href="{% url 'sign-up' %}"> agergar</a>
+        <a href="{% url 'usuariosAdd' %}"> agregar</a>
     </button>
 
     <div id="idMensajes">
@@ -23,7 +23,7 @@
     </div>
 
     <table>
-        {% if usuarios %}
+        {% if usuario %}
 
             <th>Nombre</th>
             <th>Apellido</th>
