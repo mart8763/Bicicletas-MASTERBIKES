@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Usuario, Genero
+from .models import Usuario
+from .forms import UsuarioRegisterForm
 
 # Create your views here.
 
@@ -65,25 +66,20 @@ def crud(request):
     context = {"usuarios": usuarios}
     return render(request, "pages/usuario_list.html", context)
 
-def usuariosAdd(request):
-    if request.method is not "POST":
-        genero = Genero.objects.all()
-        context = {"genero": genero}
-        return render(request, 'pages/registro.html', context)
-    else:
-        nombre = request.POST["nombre"]
-        apellido = request.POST["apellido"]
-        email = request.POST["email"]
-        password = request.POST["password"]
+def registro_vista(request):
 
-        obj = Usuario.objects.create (
-            nombre = nombre,
-            apellido = apellido,
-            email = email,
-            password = password)
-        obj.save()
-        context = {'mensaje': "Ok, datos guardados ...."}
-        return render(request, 'pages/registro.html', context)
+    if request.method == "POST":
+        form = UsuarioRegisterForm(request.POST or None)
+        if form.is_valid():
+            form.save()
+    else:
+        print("usuario no registrado")
+
+    form = UsuarioRegisterForm()
+    context = {
+        'form':  form
+    }
+    return render (request, "pages/sign-up.html", context)
     
 def usuarios_del(request, pk):
     context = {}
@@ -134,3 +130,4 @@ def usuariosUpdate(request):
         usuarios = Usuario.objects.all()
         context = {'usuarios': usuarios}
         return render(request, "pages/usuario_list.html", context)
+    

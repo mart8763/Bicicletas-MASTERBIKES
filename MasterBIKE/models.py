@@ -1,11 +1,15 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
-class Usuario(models.Model):
+class Usuario(AbstractUser):
     nombre = models.CharField(max_length=20, verbose_name='Nombre', primary_key=True)
     apellido = models.CharField(max_length=20, verbose_name='Apellido')
     email = models.EmailField(unique=True, max_length=100, null=True, verbose_name='Email')
     password = models.CharField(max_length=30, verbose_name='Password')
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['nombre', 'apellido', 'password']
 
     def __str__(self):
         return str(self.nombre) + ' ' + str(self.apellido)
