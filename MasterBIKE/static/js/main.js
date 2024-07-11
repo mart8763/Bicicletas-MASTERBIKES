@@ -56,7 +56,7 @@ const productos = [
     {
         id: "disco",
         titulo: "Disco",
-        imagen: "imgProductos/disco.png",
+        imagen: "./imgProductos/disco.png",
         precio: 20000
     },
     {
