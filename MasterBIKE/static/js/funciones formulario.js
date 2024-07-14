@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const username2 = document.getElementById('username2');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
 
 
 
@@ -40,6 +41,7 @@ const validateInputs = () => {
     const username2Value = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
 
     if (usernameValue === '') {
         setError(username, 'Requiere un nombre');
@@ -67,6 +69,14 @@ const validateInputs = () => {
         setError(password, 'La contraseña debe tener al menos 8 caracteres')
     } else {
         setSuccess(password)
+    }
+
+    if (password2Value === '') {
+        setError(password2, 'Confirme la contraseña')
+    } else if (password2Value != passwordValue) {
+        setError(password2, 'Las contraseñas no coinciden')
+    } else {
+        setSuccess(password2)
     }
 
 };
